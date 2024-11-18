@@ -12,7 +12,7 @@ repository = "https://github.com/emilbratt/eb_cycles"
 
 keywords = ["sleep", "wait", "cycles", "eb_cycles"]
 
-license = " GPL-3.0 license"
+license-file = "LICENSE"
 
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }
