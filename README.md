@@ -1,2 +1,3 @@
 # eb_cycles
-put your thread to sleep during set intervals, or.. "cycles"..
+
+Rust library providing an easy way to put your threads to sleep during set intervals, or.. "cycles"..
