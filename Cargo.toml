@@ -3,6 +3,20 @@ name = "eb_cycles"
 version = "0.1.0"
 edition = "2021"
 
+description = "Put your thread to sleep during set intervals, or.. 'cycles'.."
+readme = "README.md"
+
+authors = ["Emil Bratt <emilbratt@gmail.com>"]
+
+repository = "https://github.com/emilbratt/eb_cycles"
+
+keywords = ["sleep", "wait", "cycles", "eb_cycles"]
+
+license = " GPL-3.0 license"
+
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }
 chrono-tz = { version = "0.9.0" }
+
+[lib]
+doctest = false
