@@ -12,7 +12,7 @@ repository = "https://github.com/emilbratt/eb_cycles"
 
 keywords = ["sleep", "wait", "cycles", "eb_cycles"]
 
-license-file = "LICENSE"
+license = "AGPL-3.0+"
 
 [dependencies]
 chrono = { version = "0.4", features = ["serde"] }
