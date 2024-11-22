@@ -46,14 +46,6 @@ pub use chrono_tz;
 
 pub mod cycles;
 
-pub trait TCycle {
-    fn new(tz: chrono_tz::Tz) -> Self;
-
-    fn now(&self) -> DateTime<chrono_tz::Tz>;
-
-    fn sleep(&mut self) -> DateTime<chrono_tz::Tz>;
-}
-
 pub struct SleepCycle {
     tz: chrono_tz::Tz,
 }
