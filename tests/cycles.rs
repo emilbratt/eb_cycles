@@ -6,7 +6,7 @@ const CYCLE_MAX_COUNT: usize = 10;
 fn hour_oslo() {
     println!("hour_oslo()");
 
-    let slp_cle = SleepCycle::new(chrono_tz::Europe::Oslo);
+    let slp_cle = SleepCycle::from_tz_str("Europe/Oslo");
 
     let mut i = 0;
     while i < CYCLE_MAX_COUNT {
@@ -22,7 +22,7 @@ fn hour_oslo() {
 fn hour_utc() {
     println!("hour_utc()");
 
-    let slp_cle = SleepCycle::new(chrono_tz::UTC);
+    let slp_cle = SleepCycle::from_tz(chrono_tz::UTC);
 
     let mut i = 0;
     while i < CYCLE_MAX_COUNT {
@@ -38,7 +38,7 @@ fn hour_utc() {
 fn minute_oslo() {
     println!("minute_oslo()");
 
-    let slp_cle = SleepCycle::new(chrono_tz::Europe::Oslo);
+    let slp_cle = SleepCycle::from_tz(chrono_tz::Europe::Oslo);
 
     let mut i = 0;
     while i < CYCLE_MAX_COUNT {
@@ -54,7 +54,7 @@ fn minute_oslo() {
 fn minute_utc() {
     println!("minute_utc()");
 
-    let slp_cle = SleepCycle::new(chrono_tz::UTC);
+    let slp_cle = SleepCycle::from_tz_str("UTC");
 
     let mut i = 0;
     while i < CYCLE_MAX_COUNT {
@@ -70,7 +70,7 @@ fn minute_utc() {
 fn quarter_oslo() {
     println!("quarter_oslo()");
 
-    let slp_cle = SleepCycle::new(chrono_tz::Europe::Oslo);
+    let slp_cle = SleepCycle::from_tz(chrono_tz::Europe::Oslo);
 
     let mut i = 0;
     while i < CYCLE_MAX_COUNT {
@@ -86,7 +86,7 @@ fn quarter_oslo() {
 fn quarter_utc() {
     println!("quarter_utc()");
 
-    let slp_cle = SleepCycle::new(chrono_tz::UTC);
+    let slp_cle = SleepCycle::from_tz(chrono_tz::UTC);
 
     let mut i = 0;
     while i < CYCLE_MAX_COUNT {
