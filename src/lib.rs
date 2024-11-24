@@ -56,17 +56,15 @@ impl SleepCycle {
     }
 
     pub fn from_tz_str(tz_str: &str) -> Self {
-        if tz_str.to_lowercase() == "utc" {
+        let tz = if tz_str.to_lowercase() == "utc" {
             // Make it easy to choose Utc without having to explicitly write "UTC" or "Etc/UTC"
-            Self {
-                tz: chrono_tz::Etc::UTC
-            }
+            chrono_tz::UTC
         } else {
             // The default branch where we parse the tz string..
-            Self {
-                tz: tz_str.parse::<chrono_tz::Tz>().unwrap()
-            }
-        }
+            tz_str.parse::<chrono_tz::Tz>().unwrap()
+        };
+
+        Self { tz }
     }
 
     pub fn datetime_now(&self) -> DateTime<chrono_tz::Tz> {
