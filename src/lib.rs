@@ -7,25 +7,21 @@
 //!
 //! // First we need to choose a chrono_tz timezone to work with (re-exported from this library)
 //! // See https://docs.rs/chrono-tz/latest/chrono_tz/ for docs about timezones.
-//! let tz = let chrono_tz::Europe::Oslo;
-//! // You can for example just use Utc.
-//! let utc_tz = let chrono_tz::UTC;
-//! // Or you can parse the timezone if you want.
-//! let south_pole_tz: chrono_tz::Tz = "Antarctica/South_Pole".parse().unwrap();
-//!
 //! // Instantiate the sleep cycle struct with selected timezone.
-//! let slp_cle = SleepCycle::new(tz);
+//! let slp_cle = SleepCycle::from_tz(chrono_tz::Europe::Oslo);
+//! // Or instantiate by sending a string literal with the timzone identifier.
+//! let slp_cle = SleepCycle::from_tz_str("Europe/London");
 //!
 //! // Sleep until next full hour.
-//! // * if time is 15:55:10 it will sleep for 4 minutes and 50 seconds e.g. until time is 16:00)
+//! // ..if time is 15:55:10 it will sleep for 4 minutes and 50 seconds e.g. until time is 16:00)
 //! slp_cle.hour();
 //!
 //! // Sleep until next quarter.
-//! // * if time is 11:35 it will sleep until time is 11:45)
+//! // ..if time is 11:35 it will sleep until time is 11:45)
 //! slp_cle.quarter();
 //!
 //! // Sleep until next minute.
-//! // * if time is 09:37:19 it will sleep until time is 09:38:00)
+//! // ..if time is 09:37:19 it will sleep until time is 09:38:00)
 //! slp_cle.minute();
 //!
 //! // This is how you would do stuff every full hour.
