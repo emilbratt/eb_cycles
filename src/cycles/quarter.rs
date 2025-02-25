@@ -28,7 +28,7 @@ pub fn sleep(tz: chrono_tz::Tz) -> DateTime<chrono_tz::Tz> {
     // We should be on 0 second and on target minute.
     let now = datetime_now(tz);
     assert_eq!(now.second(), 0);
-    assert!(now.minute() == target_minute);
+    assert_eq!(now.minute(), target_minute);
 
     datetime_now(tz)
 }
