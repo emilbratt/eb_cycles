@@ -9,4 +9,4 @@ if ! command -v cargo-watch &> /dev/null; then
     sleep 1
 fi
 
-cargo-watch -q -c -w ./ -x "test -- --nocapture --test $1"
+RUST_TEST_TIME_INTEGRATION=3601 cargo-watch -q -c -w ./ -x "test -- --nocapture --test $1"
